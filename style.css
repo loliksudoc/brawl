@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -21,26 +20,29 @@ header {
 
 nav {
     background-color: #007bff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 nav button {
     background-color: #f4c542;
     color: black;
     border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 16px;
+    padding: 12px 18px;
+    margin: 5px;
+    font-size: 14px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav button:hover {
     background-color: #f1b000;
 }
-
 
 .block {
     padding: 20px;
@@ -51,7 +53,6 @@ h2 {
     font-size: 28px;
     margin-bottom: 20px;
 }
-
 
 .characters {
     display: flex;
@@ -98,7 +99,6 @@ h2 {
     background-color: #00275d;
 }
 
-
 .founders {
     display: flex;
     justify-content: center;
@@ -117,7 +117,6 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .gp-prices {
     display: flex;
     justify-content: center;
@@ -134,7 +133,6 @@ h2 {
     object-fit: cover;
     border-radius: 10px;
 }
-
 
 #popup {
     display: none;
@@ -176,75 +174,73 @@ h2 {
     background-color: #d73a3a;
 }
 
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
 
-@media (max-width: 600px) {
     nav button {
-        padding: 12px 20px;
-        font-size: 14px;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
     }
 
-    .characters img {
-        width: 100px;
-        height: 100px;
+    .characters {
+        flex-direction: column;
     }
 
-    .gp-prices img {
-        width: 80px;
-        height: 80px;
+    .characters div {
+        margin-bottom: 20px;
     }
 
-    #popup .content {
-        width: 90%;
-        padding: 20px;
+    .founders {
+        flex-direction: column;
     }
 
-    h2 {
-        font-size: 24px;
-    }
-}
-
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .characters img {
-        width: 110px;
-        height: 110px;
+    .founders div {
+        margin-bottom: 20px;
     }
 
-    .gp-prices img {
-        width: 90px;
-        height: 90px;
+    .gp-prices {
+        flex-direction: column;
+    }
+
+    .gp-prices div {
+        margin-bottom: 20px;
     }
 
     #popup .content {
         width: 80%;
     }
-
-    h2 {
-        font-size: 26px;
-    }
 }
 
-@media (min-width: 1025px) {
-    nav button {
-        padding: 15px 30px;
-        font-size: 16px;
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 22px;
     }
 
     .characters img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .character-btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+    .founders img {
         width: 120px;
         height: 120px;
     }
 
     .gp-prices img {
-        width: 100px;
-        height: 100px;
-    }
-
-    #popup .content {
-        width: 50%;
-    }
-
-    h2 {
-        font-size: 28px;
+        width: 80px;
+        height: 80px;
     }
 }
